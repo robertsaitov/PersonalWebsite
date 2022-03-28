@@ -1,0 +1,73 @@
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		@include vendor('appearance', 'none');
+		@include vendor('transition', 'background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out');
+		background-color: _palette(accent, bg);
+		border-radius: _size(radius);
+		border: 0;
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		padding: 0 1.5em;
+		line-height: 2.75em;
+		min-width: 9em;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 600;
+		letter-spacing: -0.025em;
+
+		&:hover {
+			background-color: lighten(_palette(accent, bg), 5);
+			color: _palette(accent, fg) !important;
+		}
+
+		&:active {
+			background-color: darken(_palette(accent, bg), 5);
+			color: _palette(accent, fg);
+		}
+
+		&.alt {
+			background-color: #555555;
+			color: #fff;
+
+			&:hover {
+				background-color: lighten(#555555, 5);
+			}
+
+			&:active {
+				background-color: darken(#555555, 5);
+			}
+		}
+
+		&.icon {
+			&:before {
+				margin-right: 0.5em;
+			}
+		}
+
+		&.fit {
+			width: 100%;
+		}
+
+		&.small {
+			font-size: 0.8em;
+		}
+	}
+
+
+@include breakpoint('<=mobilep') {
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button,
+    .button {
+        width: 100%;
+        display: block;
+    }
+}

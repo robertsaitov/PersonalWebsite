@@ -1,0 +1,135 @@
+/* Resume Sidebar */
+
+#resume-sidebar{
+	animation-name: moveInLeft;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	position: fixed;
+	overflow-y:hidden;
+    overflow-x:hidden;
+	padding: 20px 0 0 0;
+	overflow-wrap: break-word;
+	inline-size: 300px;
+
+	h3{
+		font-size: 0.9em;
+		letter-spacing: 1px;
+		margin-bottom: 0.5em;
+	}
+	p{
+		font-weight: 100;
+		font-style: normal;
+		font-size: 10pt;
+	}
+}
+
+#resume-content{
+	animation-name: moveInRight;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	h3 {
+		margin-bottom: 0.5em;
+	}
+	h4 {
+		margin-bottom: 0.2em;
+		font-size: 15px;
+		font-weight: 600;
+	}
+
+	p {
+		margin-bottom: 4em;
+		font-weight: 100;
+		font-style: normal;
+		font-size: 10pt;
+		inline-size: 800px;
+	}
+
+	.job-title {
+		margin-bottom: 2em;
+		font-size: 15px;
+	}
+
+	.location {
+		display: inline-block;
+		position: relative;
+		font-size: 10px;
+		margin: 0 0 0 0;
+		padding: 1px 0 0 0;
+		float: right;
+	}
+
+	.period {
+		display: inline-block;
+		clear: both;
+		position: relative;
+		font-size: 10px;
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+		float: right;
+	}
+
+}
+
+@include breakpoint('<=normal') {
+	#resume-sidebar{
+		inline-size: 300px;
+	}
+
+	#resume-content{
+		p{
+			inline-size: 400px;
+		}
+	}
+
+}
+
+@include breakpoint('<=narrow') {
+	#resume-sidebar{
+		padding-top: 2em;
+		inline-size: 250px;
+	}
+
+	#resume-content{
+		padding-top: 2em;
+		p{
+			//inline-size: 300px;
+		}
+	}
+
+}
+
+@include breakpoint('<=narrower') {
+	#resume-sidebar{
+		display: block;
+		position: relative;
+		inline-size: 300px;
+	}
+
+	#resume-content{
+		p{
+			inline-size: 400px;
+		}
+	}
+
+}
+
+@include breakpoint('<=mobile') {
+	#resume-content{
+		p{
+			inline-size: 350px;
+		}
+	}
+}
+
+@include breakpoint('<=mobilep') {
+	#resume-sidebar{
+		p{
+			inline-size: 250px;
+		}
+	}
+	#resume-content{
+		p{
+			inline-size: 250px;
+		}
+	}
+}

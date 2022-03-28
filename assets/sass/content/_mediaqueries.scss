@@ -1,0 +1,402 @@
+/* Wide */
+
+	@include breakpoint('<=wide') {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 14pt;
+				line-height: 1.5em;
+			}
+
+		/* Banner */
+
+			#banner {
+				height: 100vh;
+
+				header{
+					.button{
+						min-width: unset;
+					}
+				}
+			}
+
+	}
+
+/* Normal */
+
+	@include breakpoint('<=normal') {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 13pt;
+				line-height: 1.5em;
+			}
+
+		/* Lists */
+
+			ol {
+				padding-left: 1.25em;
+
+				li {
+					padding-left: 0.25em;
+				}
+			}
+
+		/* Icons */
+
+			ul.icons {
+				li {
+					a, span {
+						font-size: 1.5em;
+					}
+				}
+			}
+
+		/* Header */
+
+			#header {
+				padding: 2em 0 0 0;
+
+				h1 {
+					padding: 0 0 1.75em 0;
+				}
+				a{
+					//font-size: 0.9em;
+				}
+			}
+
+		/* Banner */
+
+			header {
+				inline-size: auto;
+
+				.button {
+					min-width: unset;
+				}
+			}
+
+			#banner {
+				height: 100vh;
+			}
+
+		/* Wrapper */
+
+			.wrapper {
+				padding: 7em 0 1em 0;
+			}
+
+		/* CTA */
+
+			#cta {
+				padding: 2em 0;
+			}
+
+		/* Footer */
+
+			#footer {
+				padding: 3em 0 0 0;
+
+				.container {
+					margin-bottom: 1em;
+				}
+			}
+
+	}
+
+/* Narrow */
+
+	@include breakpoint('<=narrow') {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 12pt;
+				line-height: 1.5em;
+			}
+		/* Header */
+
+			#header {
+				display: none;
+			}
+
+			/* Home Page */
+			header {
+				inline-size: auto;
+
+			}
+
+	}
+
+/* Narrower */
+
+	@include breakpoint('<=narrower') {
+
+		/* Basic */
+
+			html, body {
+				overflow-x: hidden;
+			}
+
+			body, input, select, textarea {
+				font-size: 13pt;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				margin-bottom: 0.5em;
+			}
+
+			header {
+				inline-size: 400px;
+
+				p {
+					margin-top: -0.75em;
+				}
+
+				&.major {
+					text-align: center;
+					margin: 0 auto 2em auto;
+
+					h2 {
+						font-size: 1.75em;
+					}
+
+					p {
+						top: -0.25em;
+						font-size: 1.25em;
+					}
+				}
+			}
+
+		/* Box */
+
+			.box {
+				&.highlight {
+					text-align: left;
+					position: relative;
+					padding-left: 7em;
+
+					i {
+						position: absolute;
+						margin: 0;
+						left: 0;
+						top: 0.25em;
+					}
+				}
+
+				&.post {
+					.inner {
+						margin-left: calc(20% + 2em);
+					}
+
+					.image {
+						width: 20%;
+					}
+				}
+			}
+
+
+
+		/* Banner */
+
+			#banner {
+				height: 100vh;
+
+				header {
+					h2 {
+						display: block;
+					}
+
+					.button {
+						margin: 1em 0 0 0;
+					}
+				}
+			}
+
+		/* CTA */
+
+			#cta {
+				padding: 1.5em 0;
+
+				header {
+					h2 {
+						display: block;
+					}
+
+					.button {
+						margin: 1em 0 0 0;
+					}
+				}
+			}
+
+		/* Footer */
+
+			#footer {
+				text-align: center;
+
+				.container {
+					margin-bottom: 4em;
+				}
+
+				form .actions {
+					@include vendor('justify-content', 'center');
+					width: 100%;
+					margin-left: 0;
+
+					li {
+						&:first-child {
+							padding-left: 0;
+						}
+					}
+				}
+			}
+	}
+
+/* Mobile */
+
+	@include breakpoint('<=mobile') {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 11pt;
+				line-height: 1.35em;
+			}
+
+			h2 {
+				font-size: 1.25em;
+				letter-spacing: 0;
+				line-height: 1.35em;
+			}
+
+			h3 {
+				font-size: 1em;
+				letter-spacing: 0;
+				line-height: 1.35em;
+			}
+
+			header {
+				inline-size: auto;
+				p {
+					margin-top: -0.5em;
+					font-size: 1em;
+				}
+
+				&.major {
+					padding: 0 20px;
+
+					h2 {
+						font-size: 1.25em;
+					}
+
+					p {
+						top: 0;
+						margin-top: 1.25em;
+						font-size: 1em;
+					}
+				}
+			}
+
+		/* Menu */
+
+			ul.menu {
+				li {
+					border: 0;
+					padding: 0;
+					margin: 0;
+					display: block;
+					line-height: 2em;
+				}
+			}
+
+		/* Banner */
+
+			#banner {
+				height: 100vh;
+			}
+
+		/* Wrapper */
+
+			.wrapper {
+				padding: 7em 0 1px 0;
+			}
+
+	}
+
+/* Mobile (Portrait) */
+
+	@include breakpoint('<=mobilep') {
+
+		/* Icon */
+
+			.icon {
+				&.major {
+					width: 4em;
+					height: 4em;
+					line-height: 4em;
+					box-shadow: 0 0 0 7px white, 0 0 0 8px _palette(border);
+
+					&:before {
+						font-size: 24px;
+					}
+				}
+			}
+
+
+		/* Box */
+
+			.box {
+				&.highlight {
+					padding-left: calc(4em + 30px);
+				}
+
+				&.post {
+					.inner {
+						margin-left: calc(30% + 20px);
+					}
+
+					.image {
+						width: 30%;
+					}
+				}
+			}
+
+		/* Banner */
+
+			#banner {
+				height: 100vh;
+
+				header {
+					inline-size: auto;
+					padding: 20px;
+					 h1 {
+						 padding-top: 1.5em;
+						 margin-bottom: auto;
+					 }
+					p{
+						font-size: 9pt;
+					}
+				}
+			}
+
+		/* Wrapper */
+
+			.wrapper {
+				padding: 7em 20px 1px 20px;
+			}
+
+		/* CTA */
+
+			#cta {
+				padding: 20px;
+			}
+
+		/* Footer */
+
+			#footer {
+				padding: 2em 20px;
+				text-align: left;
+			}
+
+	}
